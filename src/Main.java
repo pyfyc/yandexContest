@@ -1,4 +1,6 @@
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     // 2022/09/06
@@ -24,6 +26,7 @@ public class Main {
             e.printStackTrace();
         }
 
+        List<String> result = new ArrayList<>();
         int[] flagArray = new int[A.length()];
         char matchType;
 
@@ -48,7 +51,10 @@ public class Main {
                     }
                 }
             }
-            System.out.print(matchType);
+            result.add(String.valueOf(matchType));
+        }
+        for (String s : result) {
+            System.out.print(s);
         }
     }
 }
